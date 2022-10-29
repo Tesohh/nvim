@@ -206,6 +206,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["tabline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabline.nvim",
+    url = "https://github.com/kdheepak/tabline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",

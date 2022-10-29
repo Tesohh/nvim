@@ -5,9 +5,8 @@ end
 
 local lualine_gruvbox = require("lualine.themes.gruvbox")
 
-
 lualine.setup({
 	options = {
-		theme = lualine_gruvbox
-	}
+		theme = lualine_gruvbox,
+	},
 })

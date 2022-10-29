@@ -102,6 +102,9 @@ return packer.startup(function(use)
 			require("toggleterm").setup()
 		end,
 	})
+
+	use("kdheepak/tabline.nvim")
+
 	if packer_startup then
 		require("packer").sync()
 	end
