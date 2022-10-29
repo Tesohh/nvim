@@ -8,6 +8,7 @@ keymap.set("n", "x", '"_x') -- Dont copy to clipboard when i press x
 keymap.set("n", "<leader>=", "<C-a>") -- Increment with leader=
 keymap.set("n", "<leader>-", "<C-x>") -- Decrement with leader-
 keymap.set("n", "<c-z>", "<nop>")
+keymap.set("v", "<c-z>", "<nop>")
 keymap.set("n", "q", "<nop>")
 
 -- window management
@@ -35,3 +36,7 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- toggle-terminal
+keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
+keymap.set("t", "<esc>", "<C-\\><C-n>")

@@ -32,6 +32,8 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("ellisonleao/gruvbox.nvim")
 
+	use("ThePrimeagen/vim-be-good")
+
 	-- split & tab management
 	use("christoomey/vim-tmux-navigator") -- <C-hjkl> split navigator
 	use("szw/vim-maximizer") -- maximize splits
@@ -91,6 +93,15 @@ return packer.startup(function(use)
 
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
+
+	-- toggleterm
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 	if packer_startup then
 		require("packer").sync()
 	end

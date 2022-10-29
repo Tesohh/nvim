@@ -1,5 +1,13 @@
 local opt = vim.opt -- for conciseness
+
+-- essential
 vim.cmd("language en_US")
+vim.opt.shell = "powershell"
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+vim.opt.shellxquote = ""
+vim.opt.shellquote = ""
+vim.opt.shellredir = "2>&1 | Out-File -Encoding UTF8 %s"
+vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s"
 
 -- line numbers
 opt.relativenumber = true
