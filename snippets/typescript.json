@@ -1,0 +1,42 @@
+{
+  "Slash Command Boilerplate": {
+    "scope": "typescript",
+    "prefix": "dscmd",
+    "body": [
+      "'use strict';",
+      "import Discord from 'discord.js';",
+      "import { getUser, type2num } from '../modules/sfc';",
+      "import cnd from '../modules/cnd';",
+      "import { Command } from '../modules/schemas';",
+      "import log from '../modules/log';",
+      "",
+      "let command:Command = {",
+      "\tdata: {",
+      "\t\tname: '$1',",
+      "\t\tdescription: '$2',",
+      "\t},",
+      "\tvcitydata: {},",
+      "",
+      "\tasync execute(itr) {",
+      "\t\tlet user = await getUser(itr.user.id);",
+      "\t\tif (user == null) return",
+      "\t\t$0",
+      "\t},",
+      "};",
+      "",
+      "export default command;"
+    ]
+  },
+  "Slash Command Option": {
+    "scope": "typescript",
+    "prefix": "dsopt",
+    "body": [
+      "{",
+      "\tname: '$1',",
+      "\tdescription: '$2',",
+      "\ttype: '${3:STRING, BOOLEAN, NUMBER, ROLE, USER, SUB_COMMAND, etc}',",
+      "\trequired: ${4:true, false},",
+      "},\n$0"
+    ]
+  }
+}
