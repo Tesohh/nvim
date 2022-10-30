@@ -104,6 +104,7 @@ return packer.startup(function(use)
 	})
 
 	use("kdheepak/tabline.nvim")
+	use("andweeb/presence.nvim")
 
 	if packer_startup then
 		require("packer").sync()
