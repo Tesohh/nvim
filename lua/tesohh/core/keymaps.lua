@@ -40,3 +40,4 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 -- toggle-terminal
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
 keymap.set("t", "<esc>", "<C-\\><C-n>")
+keymap.set("n", "<C-\\>", ":ToggleTerm")
