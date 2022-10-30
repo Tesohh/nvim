@@ -196,6 +196,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",

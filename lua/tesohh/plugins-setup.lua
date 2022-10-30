@@ -107,6 +107,7 @@ return packer.startup(function(use)
 	-- use("andweeb/presence.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("folke/tokyonight.nvim")
+	use("p00f/nvim-ts-rainbow")
 	if packer_startup then
 		require("packer").sync()
 	end
