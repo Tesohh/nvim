@@ -211,11 +211,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
-  },
   ["tabline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabline.nvim",
@@ -231,6 +226,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
