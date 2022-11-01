@@ -104,7 +104,7 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("kdheepak/tabline.nvim")
+	-- use("kdheepak/tabline.nvim")
 	-- use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 	-- use("andweeb/presence.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
