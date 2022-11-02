@@ -21,7 +21,7 @@ bufferline.setup({
 			end
 			return s
 		end,
-
+		always_show_bufferline = false,
 		numbers = "ordinal",
 		offsets = {
 			{
