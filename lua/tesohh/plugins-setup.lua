@@ -110,7 +110,6 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/dashboard-nvim" })
-	use({ "fgheng/winbar.nvim" })
 	if packer_startup then
 		require("packer").sync()
 	end
