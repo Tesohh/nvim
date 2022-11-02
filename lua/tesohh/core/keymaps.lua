@@ -55,7 +55,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set("n", "<leader>fp", "<cmd>lua require'telescope.builtin'.treesitter{}<cr>") -- symbol search, like ctrl+p @ in vscode
 
 -- toggle-terminal
-keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
+keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>")
 keymap.set("t", "<esc>", "<C-\\><C-n>")
 
 -- trouble & todo
