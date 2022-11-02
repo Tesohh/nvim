@@ -57,3 +57,7 @@ keymap.set("n", "<leader>fp", "<cmd>lua require'telescope.builtin'.treesitter{}<
 -- toggle-terminal
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm size=60 direction=vertical<cr>")
 keymap.set("t", "<esc>", "<C-\\><C-n>")
+
+-- trouble & todo
+keymap.set("n", "<leader>tr", "<cmd>Trouble<cr>")
+keymap.set("n", "<leader>td", "<cmd>TodoTrouble<cr>")
