@@ -266,6 +266,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["winbar.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\winbar.nvim",
+    url = "https://github.com/fgheng/winbar.nvim"
   }
 }
 

@@ -53,11 +53,14 @@ end
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- configure html server
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- TODO something like this would be nice
+-- local lsps = { "html", "cssls", "tailwindcss", "pyright" }
+-- for i in lsps do
+-- 	lspconfig[i].setup({
+-- 		capabilities = capabilities,
+-- 		on_attach = on_attach,
+-- 	})
+-- end
 
 -- configure typescript server with plugin
 typescript.setup({
@@ -65,6 +68,12 @@ typescript.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
 	},
+})
+
+-- configure html server
+lspconfig["html"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- configure css server
