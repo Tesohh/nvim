@@ -15,20 +15,36 @@ keymap.set("n", "q", "<nop>")
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close current split window
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") -- close current tab
+keymap.set("n", "<leader>tn", "<cmd>tabn<CR>") --  go to next tab
+keymap.set("n", "<leader>tp", "<cmd>tabp<CR>") --  go to previous tab
+
+-- Buffers
+keymap.set("n", "<leader>bx", "<cmd>w<CR><cmd>bw<CR>") -- save and quit buffer
+keymap.set("n", "<leader>bn", "<cmd>BufferLineCycleNext<CR>") --  go to next buffer
+keymap.set("n", "<leader>bp", "<cmd>BufferLineCyclePrev<CR>") --  go to previous buffer
+keymap.set("n", "<leader>bN", "<cmd>BufferLineMoveNext<cr>") -- move buffer to the right
+keymap.set("n", "<leader>bP", "<cmd>BufferLineMovePrev<cr>") -- move buffer to the left
+keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>")
+keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>")
+keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>")
+keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>")
+keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>")
+keymap.set("n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>")
+keymap.set("n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>")
+keymap.set("n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>")
+keymap.set("n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>")
 
 -- plugin keymaps
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
+keymap.set("n", "<leader>sm", "<cmd>MaximizerToggle<CR>")
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
