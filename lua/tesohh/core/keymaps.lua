@@ -11,6 +11,12 @@ keymap.set("n", "<c-z>", "<nop>")
 keymap.set("v", "<c-z>", "<nop>")
 keymap.set("n", "q", "<nop>")
 
+-- True vimmer
+keymap.set("n", "<up>", "<nop>")
+keymap.set("n", "<down>", "<nop>")
+keymap.set("n", "<left>", "<nop>")
+keymap.set("n", "<right>", "<nop>")
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
