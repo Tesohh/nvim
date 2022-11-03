@@ -30,8 +30,8 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
-	use("ellisonleao/gruvbox.nvim")
 	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use("ThePrimeagen/vim-be-good")
 
@@ -49,8 +49,8 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 
 	-- interface
-	use("nvim-lualine/lualine.nvim")
-
+	-- use("nvim-lualine/lualine.nvim")
+	use("feline-nvim/feline.nvim")
 	-- fuzzy finder
 	-- telescope-fzf-native.nvim
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })

@@ -2,6 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- essential
 vim.cmd("language en_US")
+vim.cmd("set noshowmode")
 vim.opt.shell = "powershell"
 vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
 vim.opt.shellxquote = ""

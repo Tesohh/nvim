@@ -6,6 +6,7 @@ end
 
 bufferline.setup({
 	options = {
+		highlights = require("catppuccin.groups.integrations.bufferline").get(),
 		-- mode = "tabs",
 		diagnostics = "nvim_lsp",
 		--- count is an integer representing total count of errors
