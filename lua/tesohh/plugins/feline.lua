@@ -3,11 +3,14 @@ if not status then
 	return
 end
 
+local navic_setup, navic = pcall(require, "nvim-navic")
+if not navic_setup then
+	return
+end
+
 local clrs = require("catppuccin.palettes").get_palette()
--- require('feline').setup()
 local lsp = require("feline.providers.lsp")
 local vi_mode_utils = require("feline.providers.vi_mode")
--- local gps = require("nvim-gps")
 
 local force_inactive = {
 	filetypes = {},
@@ -158,7 +161,10 @@ components.active[1][3] = {
 -- Navic
 components.active[2][1] = {
 	provider = function()
-		return require("nvim-navic").get_location()
+		return navic.get_location()
+	end,
+	enabled = function()
+		return navic.is_available()
 	end,
 	hl = {
 		bg = "bg",
