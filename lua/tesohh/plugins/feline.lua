@@ -3,10 +3,10 @@ if not status then
 	return
 end
 
-local navic_setup, navic = pcall(require, "nvim-navic")
-if not navic_setup then
-	return
-end
+-- local navic_setup, navic = pcall(require, "nvim-navic")
+-- if not navic_setup then
+-- 	return
+-- end
 
 local clrs = require("catppuccin.palettes").get_palette()
 local lsp = require("feline.providers.lsp")
@@ -158,19 +158,19 @@ components.active[1][3] = {
 }
 
 -- MID
--- Navic
-components.active[2][1] = {
-	provider = function()
-		return navic.get_location()
-	end,
-	enabled = function()
-		return navic.is_available()
-	end,
-	hl = {
-		bg = "bg",
-	},
-	right_sep = "",
-}
+-- -- Navic
+-- components.active[2][1] = {
+-- 	provider = function()
+-- 		return navic.get_location()
+-- 	end,
+-- 	enabled = function()
+-- 		return navic.is_available()
+-- 	end,
+-- 	hl = {
+-- 		bg = "bg",
+-- 	},
+-- 	right_sep = "",
+-- }
 
 -- fileIcon
 components.active[3][1] = {
