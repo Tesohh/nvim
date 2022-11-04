@@ -154,6 +154,18 @@ components.active[1][3] = {
 	},
 }
 
+-- MID
+-- Navic
+components.active[2][1] = {
+	provider = function()
+		return require("nvim-navic").get_location()
+	end,
+	hl = {
+		bg = "bg",
+	},
+	right_sep = "",
+}
+
 -- fileIcon
 components.active[3][1] = {
 	provider = function()
@@ -259,30 +271,29 @@ components.active[3][7] = {
 
 -- INACTIVE
 
--- fileType
+-- filename
 components.inactive[1][1] = {
-	provider = "file_type",
+	provider = function()
+		local filename = vim.fn.expand("%:t")
+		local extension = vim.fn.expand("%:e")
+		local icon = require("nvim-web-devicons").get_icon(filename, extension)
+		if icon == nil then
+			icon = ""
+		end
+		return icon .. " " .. vim.fn.expand("%:t")
+	end,
 	hl = {
-		fg = "black",
-		bg = "cyan",
+		fg = "skyblue",
+		bg = "bg",
 		style = "bold",
 	},
-	left_sep = {
-		str = " ",
-		hl = {
-			fg = "NONE",
-			bg = "cyan",
-		},
-	},
 	right_sep = {
-		{
-			str = " ",
-			hl = {
-				fg = "NONE",
-				bg = "cyan",
-			},
+		str = "  ",
+		hl = {
+			fg = "skyblue",
+			bg = "bg",
+			style = "bold",
 		},
-		"",
 	},
 }
 

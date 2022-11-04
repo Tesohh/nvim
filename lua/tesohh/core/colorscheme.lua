@@ -6,24 +6,29 @@ end
 catppucin.setup({
 	flavour = "mocha",
 	integrations = {
+		dashboard = true,
 		ts_rainbow = true,
-	},
-	indent_blankline = {
-		enabled = true,
-	},
-	native_lsp = {
-		enabled = true,
-		virtual_text = {
-			errors = { "italic" },
-			hints = { "italic" },
-			warnings = { "italic" },
-			information = { "italic" },
+		navic = {
+			enabled = true,
+			custom_bg = "NONE",
 		},
-		underlines = {
-			errors = { "underline" },
-			hints = { "underline" },
-			warnings = { "underline" },
-			information = { "underline" },
+		indent_blankline = {
+			enabled = true,
+		},
+		native_lsp = {
+			enabled = true,
+			virtual_text = {
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
+			},
+			underlines = {
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
+			},
 		},
 	},
 })
@@ -32,6 +37,8 @@ vim.api.nvim_command("colorscheme catppuccin")
 local function transparent_override()
 	local highlights = {
 		"Normal",
+		"NormalNC",
+		"NvimTreeNormal",
 		"LineNr",
 		"Folded",
 		"NonText",
