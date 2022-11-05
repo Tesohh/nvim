@@ -16,20 +16,20 @@ if not typescript_setup then
 	return
 end
 
--- import navic safely
-local navic_setup, navic = pcall(require, "nvim-navic")
-if not navic_setup then
-	return
-end
+-- -- import navic safely
+-- local navic_setup, navic = pcall(require, "nvim-navic")
+-- if not navic_setup then
+-- 	return
+-- end
 
 local keymap = vim.keymap
 
 local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
-	-- Attach navic
-	if client.server_capabilities.documentSymbolProvider then
-		navic.attach(client, bufnr)
-	end
+	-- -- Attach navic
+	-- if client.server_capabilities.documentSymbolProvider then
+	-- 	navic.attach(client, bufnr)
+	-- end
 	-- set keybinds
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration

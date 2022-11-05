@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
@@ -188,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "C:\\Users\\simoz\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

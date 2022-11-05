@@ -8,10 +8,6 @@ catppucin.setup({
 	integrations = {
 		dashboard = true,
 		ts_rainbow = true,
-		navic = {
-			enabled = true,
-			custom_bg = "NONE",
-		},
 		indent_blankline = {
 			enabled = true,
 		},

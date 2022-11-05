@@ -112,7 +112,8 @@ return packer.startup(function(use)
 	use({ "glepnir/dashboard-nvim" })
 	use({ "folke/trouble.nvim" })
 	use({ "folke/todo-comments.nvim" })
-	use({"SmiteshP/nvim-navic"})
+	-- use({ "SmiteshP/nvim-navic" })
+	use("lewis6991/impatient.nvim")
 	if packer_startup then
 		require("packer").sync()
 	end
