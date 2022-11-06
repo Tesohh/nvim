@@ -100,6 +100,7 @@ return packer.startup(function(use)
 	use({ "folke/todo-comments.nvim" })
 	use("lewis6991/impatient.nvim")
 	use("NvChad/nvterm")
+	-- use({ "nvim-telescope/telescope-file-browser.nvim" })
 	if packer_startup then
 		require("packer").sync()
 	end
