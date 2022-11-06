@@ -91,29 +91,15 @@ return packer.startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
-
-	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
-
-	-- toggleterm
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup()
-		end,
-	})
-
-	-- use("kdheepak/tabline.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
-	-- use("andweeb/presence.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/dashboard-nvim" })
 	use({ "folke/trouble.nvim" })
 	use({ "folke/todo-comments.nvim" })
-	-- use({ "SmiteshP/nvim-navic" })
 	use("lewis6991/impatient.nvim")
+	use("NvChad/nvterm")
 	if packer_startup then
 		require("packer").sync()
 	end
