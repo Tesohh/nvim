@@ -13,19 +13,20 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 -- configure nvim-tree
 nvimtree.setup({
 	view = {
-		width = 30,
+		adaptive_size = true,
+		width = 25,
 		side = "left",
 		hide_root_folder = true,
 	},
 	-- change folder arrow icons
 	renderer = {
 		icons = {
-			glyphs = {
-				folder = {
-					arrow_closed = "", -- arrow when folder is closed
-					arrow_open = "", -- arrow when folder is open
-				},
+			show = {
+				folder_arrow = false,
 			},
+		},
+		indent_markers = {
+			enable = true,
 		},
 	},
 	-- disable window_picker for

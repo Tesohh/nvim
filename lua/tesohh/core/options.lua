@@ -1,6 +1,8 @@
 local opt = vim.opt -- for conciseness
 
 -- essential
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.cmd("language en_US")
 vim.cmd("set noshowmode")
 vim.opt.shell = "powershell"
