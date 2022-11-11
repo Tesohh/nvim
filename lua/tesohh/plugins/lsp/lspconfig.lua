@@ -72,6 +72,24 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 -- 	})
 -- end
 
+-- import mason-lspconfig plugin safely
+local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not mason_lspconfig_status then
+	return
+end
+
+mason_lspconfig.setup_handlers({
+	function(server)
+		if server == "tsserver" or server == "sumneko_lua" then
+			return
+		end
+		lspconfig[server].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+	end,
+})
+
 -- configure typescript server with plugin
 typescript.setup({
 	server = {
@@ -80,29 +98,29 @@ typescript.setup({
 	},
 })
 
--- configure html server
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure css server
-lspconfig["cssls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure tailwindcss server
-lspconfig["tailwindcss"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure css server
-lspconfig["pyright"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- -- configure html server
+-- lspconfig["html"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
+--
+-- -- configure css server
+-- lspconfig["cssls"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
+--
+-- -- configure tailwindcss server
+-- lspconfig["tailwindcss"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
+--
+-- -- configure css server
+-- lspconfig["pyright"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({
