@@ -1,4 +1,4 @@
-require("impatient")
+-- require("impatient")
 require("tesohh.plugins-setup")
 require("tesohh.core.options")
 require("tesohh.core.keymaps")
