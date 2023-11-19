@@ -1,5 +1,8 @@
 vim.g.mapleader = ' '
-vim.cmd [[language en_US]]
+
+if vim.loop.os_uname().sysname == "Darwin" then
+	vim.cmd [[language en_US]]
+end
 
 if vim.g.vscode then
     -- VSCode extension
