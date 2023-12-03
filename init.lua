@@ -1,27 +1,21 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
+print(vim.loop.os_uname().sysname)
 if vim.loop.os_uname().sysname == "Darwin" then
-    vim.cmd [[language en_US]]
+	vim.cmd([[language en_US]])
 end
 
 if vim.g.vscode then
-    -- VSCode extension
-    local vscode = require('vscode-neovim')
-    local vskeymap = function (modes, lhs, cmd)
-        vim.keymap.set(modes, lhs, function() vscode.action(cmd) end)
-    end
+	-- VSCode extension
+	local vscode = require("vscode-neovim")
 
-    -- use system clipboard but only for yanks
-    vim.opt.clipboard = ""
-    vim.keymap.set({ "n", "x" }, "y", '"+y')
-    vim.keymap.set("n", "p", '""p')
+	require("vscode.keymaps")
 
-    vskeymap("n", "<leader><leader>", "workbench.action.showCommands")
-    vskeymap("n", "<leader>cl", "codelens.showLensesInCurrentLine")
-    vskeymap("n", "<leader>ca", "editor.action.quickFix")
-    vskeymap("n", "<leader>ff", "workbench.action.quickOpen")
-    vskeymap("n", "<tab>", "workbench.action.nextEditor")
-    vskeymap("n", "<S-tab>", "workbench.action.previousEditor")
+	vim.opt.ignorecase = true
+	vim.opt.smartcase = true
+	vim.opt.hlsearch = true
+
+	vim.opt.clipboard = "unnamedplus"
 else
-    -- ordinary Neovim
+	-- ordinary Neovim
 end
