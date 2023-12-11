@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 
-print(vim.loop.os_uname().sysname)
 if vim.loop.os_uname().sysname == "Darwin" then
 	vim.cmd([[language en_US]])
 end
