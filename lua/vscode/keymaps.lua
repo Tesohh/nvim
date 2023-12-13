@@ -45,5 +45,5 @@ vskeymap({'n', 'x'}, '<leader><leader>', 'workbench.action.showCommands')
 -- debugging
 
 -- buffer
-vskeymap({'n','x'}, 'H', "workbench.action.previousEditor")
-vskeymap({'n','x'}, 'L', "workbench.action.nextEditor")
+-- vskeymap({'n','x'}, 'H', "workbench.action.previousEditor")
+-- vskeymap({'n','x'}, 'L', "workbench.action.nextEditor")
