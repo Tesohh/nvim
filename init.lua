@@ -1,20 +1,19 @@
 vim.g.mapleader = " "
 
 if vim.loop.os_uname().sysname == "Darwin" then
-	vim.cmd([[language en_US]])
+    vim.cmd([[language en_US]])
 end
 
 if vim.g.vscode then
-	-- VSCode extension
-	local vscode = require("vscode-neovim")
+    require("vscode.keymaps")
 
-	require("vscode.keymaps")
+    vim.opt.ignorecase = true
+    vim.opt.smartcase = true
+    vim.opt.hlsearch = true
 
-	vim.opt.ignorecase = true
-	vim.opt.smartcase = true
-	vim.opt.hlsearch = true
-
-	vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 else
-	-- ordinary Neovim
+    -- ordinary Neovim
+    require("nv.opts")
+    require("nv.lazy")
 end
