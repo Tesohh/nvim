@@ -14,4 +14,7 @@ return {
             vim.keymap.set({ "n", "x" }, ";", "<cmd>Telescope buffers theme=dropdown<cr>")
         end,
     },
+    {
+        "nvim-telescope/telescope-symbols.nvim",
+    },
 }
