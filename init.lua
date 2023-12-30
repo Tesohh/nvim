@@ -16,4 +16,5 @@ else
     -- ordinary Neovim
     require("nv.opts")
     require("nv.lazy")
+    require("nv.keymaps")
 end
