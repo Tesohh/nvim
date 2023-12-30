@@ -28,6 +28,7 @@ return {
         },
         opts = {
             handlers = {},
+            ensure_installed = require("nv.masonlist").formatters_linters,
         },
     },
 }

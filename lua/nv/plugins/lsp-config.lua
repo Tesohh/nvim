@@ -7,10 +7,13 @@ return {
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = { "lua_ls" },
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
         },
         config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = require("nv.masonlist").lsp,
+            })
             require("mason-lspconfig").setup_handlers({
                 function(server_name) -- default handler (optional)
                     local capabilities = require("cmp_nvim_lsp").default_capabilities()
