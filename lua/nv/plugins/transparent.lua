@@ -1,6 +1,14 @@
 return {
     "xiyaowong/transparent.nvim",
-    config = function ()
+    opts = {
+        extra_groups = {
+            "GitSignsAdd",
+            "GitSignsChange",
+            "GitSignsDelete",
+        },
+    },
+    config = function(_, opts)
+        require("transparent").setup(opts)
         vim.cmd("TransparentEnable")
-    end
+    end,
 }

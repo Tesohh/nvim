@@ -4,6 +4,7 @@
 
 - [x] Proper go configuration with gopher.nvim
 - [x] Harpoon?
+  - [ ] learn to use it well
 - [x] File explorer
 - [x] Buffer explore ; key
 - [x] windwp/nvim-ts-autotag for auto closing html tags

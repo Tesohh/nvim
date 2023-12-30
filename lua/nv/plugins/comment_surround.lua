@@ -1,4 +1,9 @@
 return {
-    { "numToStr/Comment.nvim" },
-    { "kylechui/nvim-surround" },
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
+	{ "kylechui/nvim-surround" },
 }

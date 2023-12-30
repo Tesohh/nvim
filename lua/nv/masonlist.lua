@@ -1,28 +1,28 @@
 return {
-    lsp = {
-        "lua_ls",
-        "gopls",
+	lsp = {
+		"lua_ls",
+		"gopls",
 
-        -- web
-        "html",
-        "cssls",
-        "tsserver",
-        --
+		-- web
+		"html",
+		"cssls",
+		"tsserver",
+		--
 
-        "pyright",
-    },
+		"pyright",
+	},
 
-    formatters_linters = {
-        -- lua
-        "stylua",
+	formatters_linters = {
+		-- lua
+		"stylua",
 
-        -- js
-        "prettierd",
+		-- js
+		"prettierd",
 
-        -- py
-        "black",
+		-- py
+		"black",
 
-        "gofumpt",
-        "goimports"
-    },
+		"gofumpt",
+		"goimports",
+	},
 }
