@@ -13,7 +13,7 @@
 - [x] split term
 - [x] better git integration
   - [x] Git signs
-  - [ ] custom command that asks for input, then does git add . <cr> git commit -m "" <cr> git push
+  - [x] custom command that asks for input, then does git add . <cr> git commit -m "" <cr> git push
 - [x] Commenting and surrounding
 - [ ] rest client
   - [ ] Make PR adding cookiejar
