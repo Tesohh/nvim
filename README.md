@@ -6,6 +6,7 @@
   - [ ] Make PR adding cookiejar
 - [ ] debugger setup?
   - [ ] use gopher.nvim for go debugging
+  - [ ] use rusteaceanvim for rust debugging
   - [ ] load vscode snippets and dap configurations
 - [x] Harpoon?
   - [ ] learn to use it well
@@ -22,3 +23,4 @@
   - [x] custom command that asks for input, then does git add . <cr> git commit -m "" <cr> git push
 - [x] Commenting and surrounding
 - [x] symbol search
+- [x] rust setup
