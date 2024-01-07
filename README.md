@@ -10,6 +10,9 @@
   - [ ] load vscode snippets and dap configurations
 - [x] Harpoon?
   - [ ] learn to use it well
+- [ ] add luasnip jumpables
+- [ ] https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+- [ ] make cmp menu not transparent
 
 ## Completed
 

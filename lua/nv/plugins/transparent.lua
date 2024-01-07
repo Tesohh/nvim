@@ -5,6 +5,8 @@ return {
             "GitSignsAdd",
             "GitSignsChange",
             "GitSignsDelete",
+            "FidgetTitle",
+            "FidgetTask",
         },
     },
     config = function(_, opts)

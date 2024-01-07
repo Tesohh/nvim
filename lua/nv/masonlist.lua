@@ -2,6 +2,7 @@ return {
 	lsp = {
 		"lua_ls",
 		"gopls",
+        "rust_analyzer",
 
 		-- web
 		"html",

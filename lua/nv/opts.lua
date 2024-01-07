@@ -12,6 +12,7 @@ local opt = {
     showmode = false,
     signcolumn = "yes:1",
     cmdheight = 0,
+    pumheight = 10,
 }
 
 local g = {
