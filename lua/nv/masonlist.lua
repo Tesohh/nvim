@@ -2,7 +2,7 @@ return {
 	lsp = {
 		"lua_ls",
 		"gopls",
-        "rust_analyzer",
+		"rust_analyzer",
 
 		-- web
 		"html",
@@ -11,6 +11,7 @@ return {
 		--
 
 		"pyright",
+		"jdtls",
 	},
 
 	formatters_linters = {
@@ -23,7 +24,7 @@ return {
 		-- py
 		"black",
 
-		"gofumpt",
 		"goimports",
 	},
+
 }
