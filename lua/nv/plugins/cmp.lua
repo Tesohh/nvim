@@ -1,3 +1,9 @@
+local has_words_before = function()
+    local cursor = vim.api.nvim_win_get_cursor(0)
+    return (vim.api.nvim_buf_get_lines(0, cursor[1] - 1, cursor[1], true)[1] or "")
+        :sub(cursor[2], cursor[2])
+        :match("%s")
+end
 return {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -18,10 +24,10 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
-            },
+            -- window = {
+            --     completion = cmp.config.window.bordered(),
+            --     documentation = cmp.config.window.bordered(),
+            -- },
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
@@ -32,8 +38,24 @@ return {
                 ["<C-p>"] = cmp.mapping.select_prev_item(),
                 ["<C-j>"] = cmp.mapping.select_next_item(),
                 ["<C-n>"] = cmp.mapping.select_next_item(),
-                ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-                ["<Tab>"] = cmp.mapping.select_next_item(),
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+                    elseif luasnip.expand_or_jumpable() then
+                        luasnip.expand_or_jump()
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
+                ["<S-Tab>"] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+                    elseif luasnip.jumpable(-1) then
+                        luasnip.jump(-1)
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping.complete(),
@@ -52,6 +74,18 @@ return {
                     ellipsis_char = "…",
                 }),
             },
+        })
+        vim.api.nvim_create_autocmd("ModeChanged", {
+            pattern = "*",
+            callback = function()
+                if
+                    ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+                    and require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+                    and not require("luasnip").session.jump_active
+                then
+                    require("luasnip").unlink_current()
+                end
+            end,
         })
     end,
 }

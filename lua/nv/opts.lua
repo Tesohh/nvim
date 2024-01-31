@@ -13,6 +13,8 @@ local opt = {
     signcolumn = "yes:1",
     cmdheight = 0,
     pumheight = 10,
+    rnu = true,
+    nu = true,
 }
 
 local g = {

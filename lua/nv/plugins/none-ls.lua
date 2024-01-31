@@ -6,13 +6,13 @@ return {
 		config = function()
 			local null_ls = require("null-ls")
 
-            local sources = {
-                null_ls.builtins.formatting.gofmt,
-                null_ls.builtins.formatting.rustfmt,
-            }
+			local sources = {
+				null_ls.builtins.formatting.gofmt,
+				null_ls.builtins.formatting.rustfmt,
+			}
 
 			null_ls.setup({
-                sources = sources,
+				sources = sources,
 				on_attach = function(client, bufnr)
 					if client.supports_method("textDocument/formatting") then
 						vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

@@ -23,7 +23,7 @@ return {
         vim.keymap.set("n", "<A-k>", function()
             harpoon:list():select(3)
         end)
-        vim.keymap.set("n", "<A-k>", function()
+        vim.keymap.set("n", "<A-l>", function()
             harpoon:list():select(4)
         end)
     end,
