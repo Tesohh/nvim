@@ -1,5 +1,5 @@
 return {
-    {"tpope/vim-fugitive"},
+    { "tpope/vim-fugitive", keys = { { "<leader>gs", "<cmd>Git<cr>" } }, cmd = "Git" },
     {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
