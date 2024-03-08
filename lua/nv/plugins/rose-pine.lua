@@ -1,7 +1,4 @@
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
-	-- config = function()
-	--     vim.cmd("color rose-pine")
-	-- end,
+    "rose-pine/neovim",
+    name = "rose-pine",
 }

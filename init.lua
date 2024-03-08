@@ -18,4 +18,5 @@ else
     require("nv.lazy")
     require("nv.keymaps")
     require("nv.tms")
+    require("nv.runner")
 end
