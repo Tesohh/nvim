@@ -19,4 +19,6 @@ else
     require("nv.keymaps")
     require("nv.tms")
     require("nv.runner")
+    require("nv.highlightyank")
+    require("nv.loadsnippets")
 end

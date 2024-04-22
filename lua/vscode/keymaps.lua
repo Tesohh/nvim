@@ -1,15 +1,15 @@
 local vscode = require("vscode-neovim")
 local vskeymap = function(modes, lhs, cmd)
-    vim.keymap.set(modes, lhs, function()
-        vscode.action(cmd)
-    end)
+	vim.keymap.set(modes, lhs, function()
+		vscode.action(cmd)
+	end)
 end
 local vskeymapmulti = function(modes, lhs, cmd)
-    vim.keymap.set(modes, lhs, function()
-        for i, act in ipairs(cmd) do
-            vscode.action(cmd)
-        end
-    end)
+	vim.keymap.set(modes, lhs, function()
+		for i, act in ipairs(cmd) do
+			vscode.action(cmd)
+		end
+	end)
 end
 
 -- disable arrows in all modes
@@ -50,11 +50,11 @@ vskeymap({ "n", "x" }, ";", "workbench.action.showEditorsInActiveGroup")
 -- vskeymap({'n', 'x'}, '', 'workbench.action.showCommands')
 vskeymap({ "n", "x" }, "<leader><leader>", "workbench.action.showCommands")
 vskeymap({ "n", "x" }, "<leader>sw", "actions.find")
+vskeymap({ "n", "x" }, "<leader>ss", "workbench.action.gotoSymbol")
+vskeymap({ "n", "x" }, "<leader>sS", "workbench.action.showAllSymbols")
 
 -- debugging
-
--- harpoon
-vskeymap({ "n", "x" }, "<leader>a", "vscode-harpoon.addEditor")
+-- harpoon vskeymap({ "n", "x" }, "<leader>a", "vscode-harpoon.addEditor")
 vskeymap({ "n", "x" }, "<A-e>", "vscode-harpoon.editEditors")
 vskeymap({ "n", "x" }, "<A-h>", "vscode-harpoon.gotoEditor1")
 vskeymap({ "n", "x" }, "<A-j>", "vscode-harpoon.gotoEditor2")
