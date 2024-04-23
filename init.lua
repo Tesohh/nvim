@@ -21,4 +21,5 @@ else
     require("nv.runner")
     require("nv.highlightyank")
     require("nv.loadsnippets")
+    require("nv.fixhttp")
 end
