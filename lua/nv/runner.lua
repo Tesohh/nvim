@@ -3,6 +3,7 @@ local commands = {
     go = "go run .",
     java = "javac Main.java; java Main; rm *.class",
     gdscript = "/Applications/Godot.app/Contents/MacOS/Godot run",
+    cpp = "make",
 }
 
 local Terminal = require("toggleterm.terminal").Terminal:new({

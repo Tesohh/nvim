@@ -3,6 +3,7 @@ return {
 	opts = {
 		autocmds = {
 			enableOnVimEnter = true,
+			skipEnteringNoNeckPainBuffer = true,
 		},
 		buffers = {
 			wo = {

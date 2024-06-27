@@ -163,6 +163,7 @@ ins_right({
     color = {
         fg = colors.cyan,
     },
+    cond = conditions.hide_in_width,
 })
 
 -- Now don't forget to initialize lualine
